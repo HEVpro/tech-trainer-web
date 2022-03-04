@@ -1,8 +1,8 @@
 export const Navbar = () => {
   return (
     <nav className="bg-[#C4C4C4] flex items-center justify-between h-24 ">
-      <div className="flex items-center">
-        <p className="content-center text-4xl px-9 font-bold w-21 v-13">
+      <div className="flex items-center ml-14 border-2 border-black">
+        <p className="content-center text-center w-20 h-12">
           <a href="#">MK</a>
         </p>
       </div>
@@ -21,9 +21,9 @@ export const Navbar = () => {
         </ul>
       </div>
 
-      <div className="flex justify-end items-center mr-5">
+      <div className="flex justify-end items-center mr-14">
         <a href="#">
-          <button className="bg-[#FF9443] text-[#1F1C1D] hover:bg-[#1F1C1D] hover:text-[#F4F1ED] active:bg-[#FF9443] active:text-[#1F1C1D] w-48 h-12  rounded-lg">
+          <button className="bg-[#FF9443] text-[#1F1C1D] hover:bg-[#1F1C1D] hover:text-[#F4F1ED] active:bg-[#FF9443] active:text-[#1F1C1D] w-48 h-12  rounded-2xl">
             Contact
           </button>
         </a>
