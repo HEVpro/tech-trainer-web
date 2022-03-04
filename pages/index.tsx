@@ -1,6 +1,6 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import {Navbar} from "../components/navbar";
+import type { NextPage } from "next";
+import Head from "next/head";
+import { Navbar } from "../components/navbar";
 
 const Home: NextPage = () => {
   return (
@@ -11,11 +11,10 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-          <Navbar />
+        <Navbar />
       </main>
+    </div>
+  );
+};
 
- </div>
-  )
-}
-
-export default Home
+export default Home;
