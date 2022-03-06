@@ -15,19 +15,19 @@ export const Navbar = () => {
       <div className="flex justify-center space-x-5 content-center">
         <a
           href="#"
-          className="bg-[#1F1C1D] text-[#F4F1ED] text-center w-48 h-7 rounded"
+          className="bg-[#1F1C1D] text-[#F4F1ED] text-center w-48 h-7"
         >
           Project
         </a>
         <a
           href="#"
-          className="bg-[#1F1C1D] text-[#F4F1ED] text-center w-48 h-7 rounded"
+          className="bg-[#1F1C1D] text-[#F4F1ED] text-center w-48 h-7"
         >
           Technologies
         </a>
         <a
           href="#"
-          className="bg-[#1F1C1D] text-[#F4F1ED] text-center w-48 h-7 rounded"
+          className="bg-[#1F1C1D] text-[#F4F1ED] text-center w-48 h-7"
         >
           Communication
         </a>
