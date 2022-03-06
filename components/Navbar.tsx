@@ -3,16 +3,16 @@ export const Navbar = () => {
   return (
     <nav className="flex items-center justify-between bg-[#C4C4C4] h-24">
       <div className="ml-14">
-        <a href="#">
+        <a href="https://www.youtube.com/watch?v=hRchcv05pgc">
           <img
-            src="https://media-exp1.licdn.com/dms/image/C560BAQG5KBpL2YeNwA/company-logo_200_200/0/1646384462808?e=2147483647&v=beta&t=sPtKg5U3IOzKkyfkg0kMyShJNsKh1DoACq1LGanD_34"
+            src="http://assets.stickpng.com/images/584a9b3bb080d7616d298777.png"
             alt="MK"
             className="w-20 h-14"
           />
         </a>
       </div>
 
-      <div className="md:flex justify-center space-x-5 content-center">
+      <div className="flex justify-center space-x-5 content-center">
         <a
           href="#"
           className="bg-[#1F1C1D] text-[#F4F1ED] text-center w-48 h-7"
