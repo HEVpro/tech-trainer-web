@@ -1,13 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 export const Navbar = () => {
   return (
-    <nav className="flex items-center justify-between bg-[#C4C4C4] h-24">
-      <div className="ml-14">
+    <nav className="flex items-center justify-between  bg-[#C4C4C4] sm:h-16 lg:h-24">
+      <div className="sm:ml-5 lg:ml-14">
         <a href="#">
           <img
             src="http://assets.stickpng.com/images/584a9b3bb080d7616d298777.png"
             alt="MK"
-            className="w-20 h-14"
+            className="sm:w-10 sm:h10 lg:w-16 lg:h-16"
           />
         </a>
       </div>
