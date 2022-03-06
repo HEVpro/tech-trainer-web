@@ -3,7 +3,7 @@ export const Navbar = () => {
   return (
     <nav className="flex items-center justify-between bg-[#C4C4C4] h-24">
       <div className="ml-14">
-        <a href="https://www.youtube.com/watch?v=hRchcv05pgc">
+        <a href="#">
           <img
             src="http://assets.stickpng.com/images/584a9b3bb080d7616d298777.png"
             alt="MK"
