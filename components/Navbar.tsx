@@ -9,13 +9,13 @@ export const Navbar = () => {
 
       <div>
         <ul className="flex justify-center space-x-20 content-center">
-          <li className="bg-[#1F1C1D] text-[#F4F1ED] hover:bg-[#FF9443] hover:text-[#1F1C1D] active:bg-[#1F1C1D] active:text-[#F4F1ED] text-center w-48 h-7 rounded">
+          <li className="bg-[#1F1C1D] text-[#F4F1ED] text-center w-48 h-7 rounded">
             <a href="#">Project</a>
           </li>
-          <li className="bg-[#1F1C1D] text-[#F4F1ED] hover:bg-[#FF9443] hover:text-[#1F1C1D] active:bg-[#1F1C1D] active:text-[#F4F1ED] text-center w-48 h-7 rounded">
+          <li className="bg-[#1F1C1D] text-[#F4F1ED] text-center w-48 h-7 rounded">
             <a href="#">Technologies</a>
           </li>
-          <li className="bg-[#1F1C1D] text-[#F4F1ED] hover:bg-[#FF9443] hover:text-[#1F1C1D] active:bg-[#1F1C1D] active:text-[#F4F1ED] text-center w-48 h-7 rounded">
+          <li className="bg-[#1F1C1D] text-[#F4F1ED] text-center w-48 h-7 rounded">
             <a href="#">Communication</a>
           </li>
         </ul>
