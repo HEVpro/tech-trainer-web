@@ -2,41 +2,31 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const Navbar = () => {
+
+  const letras = ["Project", "Methodology", "Technologies", "Communication", "Pricing"];
+
   return (
-    <nav className="flex items-center justify-between bg-[#C4C4C4] sm:h-16 lg:h-24">
-      <div className="hidden sm:block">
-        <div className="sm:ml-5 lg:ml-14">
-          <div className="w-12 mt-10">
+    <nav className="flex items-center justify-evenly bg-[#C4C4C4] w-full p-2 h-24">
+          <div className="flex items-center justify-center w-16 h-12">
             <FontAwesomeIcon icon={faCoffee} />
           </div>
-
-        </div>
         <div className="flex justify-center space-x-5 content-center">
-          <a
-            href="#"
-            className="bg-[#1F1C1D] text-[#F4F1ED] text-center h-7 w-24 sm:w-48 "
-          >
-            Project
-          </a>
-          <a
-            href="#"
-            className="bg-[#1F1C1D] text-[#F4F1ED] text-center w-48 h-7"
-          >
-            Technologies
-          </a>
-          <a
-            href="#"
-            className="bg-[#1F1C1D] text-[#F4F1ED] text-center w-48 h-7"
-          >
-            Communication
-          </a>
+          {letras.map(letra => (
+              <div key={letra} className="flex items-center justify-center rounded-lg w-32 h-10 bg-secondary-black">
+                <a
+                    href="#"
+                    className="text-primary"
+                >
+                  {letra}
+                </a>
+              </div>
+              ))}
         </div>
         <div className="mr-14">
-          <button className="bg-[#FF9443] text-[#1F1C1D] w-48 h-12 rounded-2xl">
+          <button className="bg-accent text-secondary-black h-10 w-32 rounded-xl">
             <a href="#">Contact</a>
           </button>
         </div>
-      </div>
     </nav>
   );
 };

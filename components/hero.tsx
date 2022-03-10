@@ -3,10 +3,6 @@
 export const Hero = () => {
   return (
     <div className="flex">
-      <div className="">
-        <h1 className=""></h1>
-      </div>
-      <div className=""></div>
       <div className="flex flex-col  ml-24">
         <div className=" bg-basico w-48 h-8 mb-9 mt-48 ">
           {" "}
