@@ -1,4 +1,4 @@
-import { faBars, faCircleXmark } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faCircleXmark, faCoffee } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {useState} from "react";
 
@@ -24,14 +24,17 @@ export const Navbar = () => {
 
   return (
     <nav className="flex items-center justify-evenly bg-secondary-grey w-full p-2 h-24">
-          <button className="flex items-center justify-center w-16 h-12" onClick={() => handleMenu()}>
+        <div className="flex items-center justify-center w-16 h-12">
+            <FontAwesomeIcon className="" icon={faCoffee} />
+        </div>
+          <button className="flex items-center justify-center w-14 h-12 lg:hidden" onClick={() => handleMenu()}>
               {menu ?
                   <FontAwesomeIcon className="" icon={faCircleXmark} /> :
                   <FontAwesomeIcon className="" icon={faBars} />}
           </button>
         <div className="flex justify-center space-x-5 content-center">
           {letras.map(letra => (
-              <div key={letra} className="flex items-center justify-center rounded-lg w-32 h-10 bg-secondary-black">
+              <div key={letra} className="hidden lg:flex items-center justify-center rounded-lg w-32 h-10 bg-secondary-black">
                 <a
                     href="#"
                     className="text-primary"
