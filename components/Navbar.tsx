@@ -32,21 +32,11 @@ export const Navbar = () => {
   console.log(menu);
 
   return (
-    <nav className="flex justify-between lg:justify-evenly items-center  bg-secondary-grey w-full p-2 h-24">
-      <div className="flex items-center justify-center w-16 h-12">
+    <nav className="flex items-center justify-between bg-secondary-grey w-full p-2 h-24 lg:justify-evenly">
+      <div className="flex items-center w-16 h-12">
         <FontAwesomeIcon className="" icon={faCoffee} />
       </div>
-      <button
-        className="flex items-center w-12 lg:hidden"
-        onClick={() => handleMenu()}
-      >
-        {menu ? (
-          <FontAwesomeIcon icon={faCircleXmark} />
-        ) : (
-          <FontAwesomeIcon icon={faBars} />
-        )}
-      </button>
-      <div className="flex justify-center content-center">
+      <div className="flex justify-evenly w-full">
         {letras.map((letra) => (
           <div
             key={letra}
@@ -63,6 +53,18 @@ export const Navbar = () => {
           <a href="#">Contact</a>
         </button>
       </div>
+        <div className="">
+            <button
+                className="flex items-center w-12 h-12 lg:hidden"
+                onClick={() => handleMenu()}
+            >
+                {menu ? (
+                    <FontAwesomeIcon icon={faCircleXmark} />
+                ) : (
+                    <FontAwesomeIcon icon={faBars} />
+                )}
+            </button>
+        </div>
     </nav>
   );
 };
