@@ -9,7 +9,7 @@ import {useState} from "react";
 export const Navbar = () => {
     const [menu, setMenu] = useState<boolean>();
 
-    const links:Array<string> = [
+    const links: Array<string> = [
         "Project",
         "Methodology",
         "Technologies",
