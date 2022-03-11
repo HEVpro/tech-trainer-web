@@ -7,7 +7,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {useState} from "react";
 
 export const Navbar = () => {
-    const [menu, setMenu] = useState<boolean>(false);
+    const [menu, setMenu] = useState<boolean>();
 
     const links:Array<string> = [
         "Project",
