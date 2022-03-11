@@ -7,19 +7,14 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {useState} from "react";
 
 export const Navbar = () => {
-    //TExt cases
-    // dani_valer snake case
-    // daniValero camel case
-    // dani-valero kebab case
-
     const [menu, setMenu] = useState<boolean>(false);
 
-    const letras = [
+    const links:Array<string> = [
         "Project",
         "Methodology",
         "Technologies",
         "Communication",
-        "Pricing",
+        "Pricing"
     ];
 
     const handleMenu = () => {
@@ -29,7 +24,6 @@ export const Navbar = () => {
             setMenu(false);
         }
     };
-    console.log(menu);
 
     return (
         <nav className="flex items-center justify-between bg-secondary-grey w-full p-2 h-24 lg:justify-evenly">
@@ -37,13 +31,13 @@ export const Navbar = () => {
                 <FontAwesomeIcon className="w-16 h-12" icon={faCoffee}/>
             </div>
             <div className="flex justify-evenly w-2/3">
-                {letras.map((letra) => (
+                {links.map((link) => (
                     <div
-                        key={letra}
+                        key={link}
                         className="hidden lg:flex items-center justify-center rounded-lg w-32 h-10 bg-secondary-black"
                     >
                         <a href="#" className="text-primary">
-                            {letra}
+                            {link}
                         </a>
                     </div>
                 ))}
