@@ -18,11 +18,14 @@ export const Navbar = () => {
     ];
 
     const handleMenu = () => {
-        if (!menu) {
-            setMenu(true);
-        } else {
-            setMenu(false);
-        }
+        // ternary operator
+        !menu ? setMenu(true) : setMenu(false)
+        // conditional
+        // if (!menu) {
+        //     setMenu(true);
+        // } else {
+        //     setMenu(false);
+        // }
     };
 
     return (
