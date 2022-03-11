@@ -1,42 +1,67 @@
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+    faBars,
+    faCircleXmark,
+    faCoffee,
+} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {useState} from "react";
 
 export const Navbar = () => {
-  return (
-    <nav className="flex items-center justify-between bg-[#C4C4C4] sm:h-16 lg:h-24">
-      <div className="hidden sm:block">
-        <div className="sm:ml-5 lg:ml-14">
-          <div className="w-12 mt-10">
-            <FontAwesomeIcon icon={faCoffee} />
-          </div>
+    const [menu, setMenu] = useState<boolean>();
 
-        </div>
-        <div className="flex justify-center space-x-5 content-center">
-          <a
-            href="#"
-            className="bg-[#1F1C1D] text-[#F4F1ED] text-center h-7 w-24 sm:w-48 "
-          >
-            Project
-          </a>
-          <a
-            href="#"
-            className="bg-[#1F1C1D] text-[#F4F1ED] text-center w-48 h-7"
-          >
-            Technologies
-          </a>
-          <a
-            href="#"
-            className="bg-[#1F1C1D] text-[#F4F1ED] text-center w-48 h-7"
-          >
-            Communication
-          </a>
-        </div>
-        <div className="mr-14">
-          <button className="bg-[#FF9443] text-[#1F1C1D] w-48 h-12 rounded-2xl">
-            <a href="#">Contact</a>
-          </button>
-        </div>
-      </div>
-    </nav>
-  );
+    const links: Array<string> = [
+        "Project",
+        "Methodology",
+        "Technologies",
+        "Communication",
+        "Pricing"
+    ];
+
+    const handleMenu = () => {
+        // ternary operator
+        !menu ? setMenu(true) : setMenu(false)
+        // conditional
+        // if (!menu) {
+        //     setMenu(true);
+        // } else {
+        //     setMenu(false);
+        // }
+    };
+
+    return (
+        <nav className="flex items-center justify-between bg-secondary-grey w-full p-2 h-24 lg:justify-evenly">
+            <div className="w-16 h-12">
+                <FontAwesomeIcon className="w-16 h-12" icon={faCoffee}/>
+            </div>
+            <div className="flex justify-evenly w-2/3">
+                {links.map((link) => (
+                    <div
+                        key={link}
+                        className="hidden lg:flex items-center justify-center rounded-lg w-32 h-10 bg-secondary-black"
+                    >
+                        <a href="#" className="text-primary">
+                            {link}
+                        </a>
+                    </div>
+                ))}
+            </div>
+            <div className="mr-14">
+                <button className="hidden lg:block bg-accent text-secondary-black h-10 w-32 rounded-xl">
+                    <a href="#">Contact</a>
+                </button>
+            </div>
+            <div className="">
+                <button
+                    className="flex items-center w-12 h-12 lg:hidden"
+                    onClick={() => handleMenu()}
+                >
+                    {menu ? (
+                        <FontAwesomeIcon icon={faCircleXmark}/>
+                    ) : (
+                        <FontAwesomeIcon icon={faBars}/>
+                    )}
+                </button>
+            </div>
+        </nav>
+    );
 };
