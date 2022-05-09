@@ -3,4 +3,9 @@ module.exports = {
     tailwindcss: {},
     autoprefixer: {},
   },
-}
+  theme: {
+    fontFamily: {
+      title: ["Noto Serif"],
+    },
+  },
+};

@@ -1,67 +1,46 @@
-import {
-    faBars,
-    faCircleXmark,
-    faCoffee,
-} from "@fortawesome/free-solid-svg-icons";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {useState} from "react";
-
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
 export const Navbar = () => {
-    const [menu, setMenu] = useState<boolean>();
+  return (
+    <nav className=" flex items-center justify-between bg-white w-full h-24  ">
+      <div className="ml-4">
+        <Image
+          src="https://cdn-icons-png.flaticon.com/512/594/594311.png"
+          alt=""
+          width={64}
+          height={64}
+        />
+      </div>
 
-    const links: Array<string> = [
-        "Project",
-        "Methodology",
-        "Technologies",
-        "Communication",
-        "Pricing"
-    ];
-
-    const handleMenu = () => {
-        // ternary operator
-        !menu ? setMenu(true) : setMenu(false)
-        // conditional
-        // if (!menu) {
-        //     setMenu(true);
-        // } else {
-        //     setMenu(false);
-        // }
-    };
-
-    return (
-        <nav className="flex items-center justify-between bg-secondary-grey w-full p-2 h-24 lg:justify-evenly">
-            <div className="w-16 h-12">
-                <FontAwesomeIcon className="w-16 h-12" icon={faCoffee}/>
-            </div>
-            <div className="flex justify-evenly w-2/3">
-                {links.map((link) => (
-                    <div
-                        key={link}
-                        className="hidden lg:flex items-center justify-center rounded-lg w-32 h-10 bg-secondary-black"
-                    >
-                        <a href="#" className="text-primary">
-                            {link}
-                        </a>
-                    </div>
-                ))}
-            </div>
-            <div className="mr-14">
-                <button className="hidden lg:block bg-accent text-secondary-black h-10 w-32 rounded-xl">
-                    <a href="#">Contact</a>
-                </button>
-            </div>
-            <div className="">
-                <button
-                    className="flex items-center w-12 h-12 lg:hidden"
-                    onClick={() => handleMenu()}
-                >
-                    {menu ? (
-                        <FontAwesomeIcon icon={faCircleXmark}/>
-                    ) : (
-                        <FontAwesomeIcon icon={faBars}/>
-                    )}
-                </button>
-            </div>
-        </nav>
-    );
+      <div>
+        <div className="flex justify-center text-lg ">
+          <button className=" mx-5">
+            <h1 className=" text-orange-600">HOME</h1>
+          </button>
+          <button className=" mx-5">
+            <h1>PAGES</h1>
+          </button>
+          <button className=" mx-5">
+            <h1>PORTFOLIO</h1>
+          </button>
+          <button className=" mx-5">
+            <h1>BLOG</h1>
+          </button>
+          <button className=" mx-5">
+            <h1>CONTACT US</h1>
+          </button>
+        </div>
+      </div>
+      <div className="flex justify-end mr-10 text-xl">
+        <button className="mx-4">
+          <FontAwesomeIcon icon={faMagnifyingGlass} />
+        </button>
+        <button className="">
+          <FontAwesomeIcon icon={faBars} />
+        </button>
+      </div>
+    </nav>
+  );
 };
